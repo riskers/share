@@ -378,7 +378,9 @@ html{
 [slide]
 # 切图神器
 
-* [MarkMan](http://www.getmarkman.com/) / [PxCook](http://www.fancynode.com.cn/pxcook/home) / [AssistorPS](http://www.uisdc.com/tag/assistor-ps)
+* [MarkMan](http://www.getmarkman.com/) / [PxCook](http://www.fancynode.com.cn/pxcook/home) 
+* [AssistorPS](http://www.uisdc.com/tag/assistor-ps) / [parker](http://www.cutterman.cn/v2/parker)
+* [cutterman](http://www.cutterman.cn/v2/cutterman)
 * [browsersync](http://www.browsersync.cn/)
 
 
