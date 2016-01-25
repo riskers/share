@@ -1,0 +1,16 @@
+{
+  "name": "riskers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "nodeppt": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodeppt start -w -d md" ,
+    "publish": "nodeppt generate md share -a "
+  },
+  "author": "",
+  "license": "ISC"
+}
