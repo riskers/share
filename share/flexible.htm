@@ -68,7 +68,7 @@
 <li>屏幕像素密度（Pibel Per Inch）简称 <code>ppi</code> ，单位是 <code>dpi</code>（dot per inch）。这里指屏幕水平或垂直每英寸有326个物理像素。原则上来说，ppi越高越好，因为图像会更加细腻清晰。</li>
 </ul>
 </li>
-<li><img src="http://7xlc2a.com1.z0.glb.clouddn.com/16-1-19/56924573.jpg?imageView/2/w/300" alt="ppi">
+<li><img src="./img/flexible/ppi.png" alt="ppi">
 </li>
 <li><a href="https://www.sven.de/dpi/" target="_blank">https://www.sven.de/dpi/</a></li>
 </ul>
@@ -92,7 +92,7 @@
 <ul class="fadeIn">
 <li>一个没有为移动端做优化的网页，会尽可能缩小网页让用户看到所有东西</li>
 <li>浏览器厂商为了让用户在小屏幕下网页也能够显示地很好，所以把视口宽度设置地很大，一般在 768px ~ 1024px 之间，最常见的宽度是 980px</li>
-<li><img src="http://7xlc2a.com1.z0.glb.clouddn.com/FvGTuNjj6jbpHZvXtcj-L6_yQWxX" alt="布局视口"></li>
+<li><img src="./img/flexible/layout_viewport.png" alt="布局视口"></li>
 </ul>
 
 </article></section></slide>
@@ -120,7 +120,7 @@
 <ul class="fadeIn">
 <li><p>用户正在看到的网页的区域，大小是屏幕中<strong>CSS像素</strong>的数量</p>
 </li>
-<li><img src="http://7xlc2a.com1.z0.glb.clouddn.com/FmxlnAO__-56ZZNS5HZcdQloNTfI" alt="视觉视口">
+<li><img src="./img/flexible/visual_layout.png" alt="视觉视口">
 </li>
 <li><p>获取视觉视口尺寸</p>
 <p>  <code>window.innerWidth/Height</code></p>
@@ -143,10 +143,7 @@
 <li>使用理想视口<ul>
 <li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code></li>
 <li>其实就是把布局视口设置成屏幕宽度</li>
-<li><blockquote>
-<p>定义理想视口是浏览器的事情，并不能简单地认为是开发者定义的，开发者只能使用</p>
-</blockquote>
-</li>
+<li>定义理想视口是浏览器的事情，并不能简单地认为是开发者定义的，开发者只能使用</li>
 </ul>
 </li>
 </ul>
@@ -159,7 +156,7 @@
 <slide class="slide hasnote"><aside class="note">
 <section>
 <p>默认浏览器是安卓系统内置的浏览器，长下面那个样子。而且它使用的是Webkit而不是Blink。只有在更新安卓系统的时候才能更新它。直到安卓4.3，Google不再更新。</p>
-<p><img src="http://7xlc2a.com1.z0.glb.clouddn.com/Fnh9LjvDVnAGUktUBInc04QIIY_I" alt="安卓webkit"></p>
+<p><img src="./img/flexible/android_webkit.jpg" alt="安卓webkit"></p>
 <p>而下载浏览器都返回的是理想视口尺寸。</p>
 
 </section>
@@ -178,8 +175,8 @@
 </ul>
 
 </article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article>
-<h2>4. 缩放</h2>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>4. 缩放</h1>
 
 </article></section></slide>
 <slide class="slide hasnote"><aside class="note">
@@ -188,7 +185,7 @@
 
 </section>
 </aside><section class="slide-wrapper"><hgroup>
-<h2>缩放与设备像素、CSS像素的关系</h2>
+<h3>缩放与设备像素、CSS像素的关系</h3>
 
 </hgroup><article>
 
@@ -216,7 +213,7 @@
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
 <h2>查看缩放比例</h2>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/16-1-19/93207454.jpg" alt="查看缩放比例">
+<img src="./img/flexible/ratio.png" alt="查看缩放比例">
 <blockquote>
 <p>这里的 0.3 是相对于<strong>理想视口</strong>的</p>
 </blockquote>
@@ -296,7 +293,7 @@
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
 <p>以这个为例</p>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FlIqUibwhVcB4dvR-8RPOTkog3kP" alt="app-demo">
+<img src="./img/flexible/app-demo.jpg" alt="app-demo">
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
@@ -333,7 +330,7 @@
 </aside><section class="slide-wrapper"><article>
 <h2>适配方案二：固定宽度，viewport缩放</h2>
 <p><strong>设计图、页面宽度、viewport width使用一个宽度，浏览器帮我们完成缩放。单位使用px即可</strong></p>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FjDCphxn990kD9GTMJZOYXJ5fVKh" alt="1">
+<img src="./img/flexible/width-demo.gif" alt="width-demo">
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
@@ -346,7 +343,7 @@
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
 <h2>适配方案三：rem做宽度，viewport缩放</h2>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FiER3qR2qrrXLna3KNuzm-oYf-qG" alt="rem">
+<img src="./img/flexible/rem.png" alt="rem">
 <p>动态生成：</p>
 <ol>
 <li>屏幕宽度设置 <code>rem</code>的大小，即给<code>&lt;html&gt;</code>设置<code>font-size</code></li>
@@ -365,7 +362,7 @@
 <h2>适配方案三：rem做宽度，viewport缩放</h2>
 <h3>设置rem</h3>
 <p><strong>得到一个与屏幕宽度相关的单位</strong></p>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FoU5vgLoTAPCSxNZP6yl8kgSPh-i" alt="rem">
+<img src="./img/flexible/flexible.png" alt="rem">
 <pre><code class="css">html{
     font-size: 屏幕宽度 / 10; 
 }
@@ -404,7 +401,7 @@
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FtuW6bLLa0jVmND_X0t2ll-df1gX" alt="demo">
+<img src="./img/flexible/demo.png" alt="demo">
 <p>第一种方案做简单页面还行，做复杂一点的就有点麻烦了。</p>
 
 </article></section></slide>
@@ -414,7 +411,7 @@
 
 </section>
 </aside><section class="slide-wrapper"><article>
-<img src="http://7xlc2a.com1.z0.glb.clouddn.com/FuLz-9m9uuVD1ktTKf1hcByT28BU" alt="PK活动">
+<img src="./img/flexible/360demo.png" alt="PK活动">
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article>
