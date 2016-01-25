@@ -375,7 +375,11 @@ html{
 [slide]
 # END
 
+[slide]
+# 切图神器
 
+* [MarkMan](http://www.getmarkman.com/) / [PxCook](http://www.fancynode.com.cn/pxcook/home) / [AssistorPS](http://www.uisdc.com/tag/assistor-ps)
+* [browsersync](http://www.browsersync.cn/)
 
 
 
