@@ -1,5 +1,6 @@
 {
-  "name": "riskers",
+  "name": "riskers-sharing",
+  "author": "riskers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +12,5 @@
     "start": "nodeppt start -w -d md" ,
     "publish": "nodeppt generate md share -a"
   },
-  "author": "",
   "license": "ISC"
 }
