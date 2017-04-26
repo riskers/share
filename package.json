@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "nodeppt start -w -d md" ,
-    "publish": "nodeppt generate md share -a "
+    "publish": "nodeppt generate md share -a"
   },
   "author": "",
   "license": "ISC"
