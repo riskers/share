@@ -224,6 +224,10 @@ module: {
 :global(.title) {
   color: green;
 }
+
+:global {
+  .title {}
+}
 ```
 
   [note]
