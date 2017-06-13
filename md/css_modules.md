@@ -20,7 +20,7 @@ date: 2017年4月26日
 
 # What
 
-[CSS Modules](https://github.com/css-modules/css-modules)：使用JS管理CSS依赖，学习成本几乎为零，完美 webpack / React 。
+[CSS Modules](https://github.com/css-modules/css-modules)：使用JS管理CSS依赖，学习成本几乎为零，完美搭配 webpack / React 。
 
 ****************************************************************************************************************
 
@@ -379,6 +379,23 @@ class Demo extends React.Component {
 [slide]
 
 为了避免太多的 `style.`，使用 babel 插件 [react-css-modules](https://github.com/gajus/babel-plugin-react-css-modules):
+
+```js
+// .babelrc
+{
+  "plugins": [
+    ["react-css-modules",
+      {
+        "generateScopedName":"[local]___[hash:base64:5]"
+      }
+    ]
+  ]
+}
+```
+
+****************************************************************************************************************
+
+[slide]
 
 ```js
 import './style.css'

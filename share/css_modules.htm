@@ -33,7 +33,7 @@
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><hgroup>
 <h1>What</h1>
-<p><a href="https://github.com/css-modules/css-modules" target="_blank">CSS Modules</a>：使用JS管理CSS依赖，学习成本几乎为零，完美 webpack / React 。</p>
+<p><a href="https://github.com/css-modules/css-modules" target="_blank">CSS Modules</a>：使用JS管理CSS依赖，学习成本几乎为零，完美搭配 webpack / React 。</p>
 
 </hgroup><article>
 
@@ -385,6 +385,23 @@ class Demo extends React.Component {
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><hgroup>
 <p>为了避免太多的 <code>style.</code>，使用 babel 插件 <a href="https://github.com/gajus/babel-plugin-react-css-modules" target="_blank">react-css-modules</a>:</p>
+<pre><code class="js">// .babelrc
+{
+  &quot;plugins&quot;: [
+    [&quot;react-css-modules&quot;,
+      {
+        &quot;generateScopedName&quot;:&quot;[local]___[hash:base64:5]&quot;
+      }
+    ]
+  ]
+}
+</code></pre>
+
+</hgroup><article>
+
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
 <pre><code class="js">import &#39;./style.css&#39;
 
 class Demo extends React.Component {
