@@ -280,6 +280,33 @@ class Demo extends React.Component {
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>简化 composes 路径</h2>
+<pre><code class="js">{
+  loader: &#39;css-loader&#39;,
+  options: {
+    modules: true,
+    localIdentName: &#39;[local]___[hash:base64:5]&#39;,
+    importLoaders: 1,
+    alias: {
+      containers: ROOT + &#39;/src/containers&#39;,
+    }
+  }
+}
+</code></pre>
+<pre><code class="css">.otherClassName {
+  composes: className from &#39;../../../style.css&#39;;
+}
+
+.otherClassName {
+  composes: className from &#39;containers/A/style.css&#39;;
+}
+</code></pre>
+
+</hgroup><article>
+
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
 <p>以上是 CSS Modules 的所有功能，具体可看官方<a href="https://css-modules.github.io/webpack-demo/" target="_blank">demo</a></p>
 
 </hgroup><article>

@@ -276,6 +276,35 @@ module: {
 ****************************************************************************************************************
 
 [slide]
+## 简化 composes 路径
+
+```js
+{
+  loader: 'css-loader',
+  options: {
+    modules: true,
+    localIdentName: '[local]___[hash:base64:5]',
+    importLoaders: 1,
+    alias: {
+      containers: ROOT + '/src/containers',
+    }
+  }
+}
+```
+
+```css
+.otherClassName {
+  composes: className from '../../../style.css';
+}
+
+.otherClassName {
+  composes: className from 'containers/A/style.css';
+}
+```
+
+****************************************************************************************************************
+
+[slide]
 
 以上是 CSS Modules 的所有功能，具体可看官方[demo](https://css-modules.github.io/webpack-demo/)
 
