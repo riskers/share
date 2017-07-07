@@ -359,6 +359,8 @@ less/sass 等同与 JS 中的 coffee，是用自己的语法转译为 CSS
 
 [slide]
 
+## 变量共享 (结合postcss)
+
 ```css
 @value xxx: #c1c3c4;
 
