@@ -103,6 +103,14 @@ Chrome 禁止使用非 web store 下载的扩展
 
 [slide]
 
+# 查看源码
+
+* Mac ~/Library/Application\ Support/Google/Chrome/Default/Extensions/{Extension-ID}
+
+****************************************************************************************************************
+
+[slide]
+
 远远不够
 
 * Firefox 扩展正式发布前会经过严格审核（人工）
