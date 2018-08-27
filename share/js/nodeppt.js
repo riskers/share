@@ -464,7 +464,9 @@
         }
         slideInCallBack(direction);
         removePaint();
-
+        if(window.screenfull && screenfull.hide){
+            screenfull.hide();
+        }
         if ($doc.body.classList.contains('overview')) {
             focusOverview_();
             return;
@@ -1223,7 +1225,21 @@
                     $cur.dataset.status = 'wait';
                     return;
                 } else {
-                    e.stop();
+                    //e.stop();
+                    //fixed #148 magic多个子页面列表动效失效bug
+                    var $willgoneSlide = $slides[index + 1];
+                    var buildItems = toArray($('.building', $willgoneSlide));
+                    var buildedItems = toArray($('.builded', $willgoneSlide));
+                    if (buildItems.length > 0 || buildedItems.length > 0) {
+                        var willgoneSlideEvent = dispatchEvent($willgoneSlide, 'Build', {
+                            direction: 'prev',
+                            container: $willgoneSlide
+                        });
+                        willgoneSlideEvent.stop();
+                        return;
+                    } else {
+                        e.stop();
+                    }
                 }
             } else {
                 index++;
@@ -1234,7 +1250,20 @@
                     $cur.dataset.status = 'done';
                     return;
                 } else {
-                    e.stop();
+                    //e.stop();
+                    //fixed #148 magic多个子页面列表动效失效bug
+                    var $willgoneSlide = $slides[index-1];
+                    var toBuildItems = toArray($('.tobuild', $willgoneSlide));
+                    if(toBuildItems.length>0){
+                        var willgoneSlideEvent = dispatchEvent($willgoneSlide, 'Build', {
+                            direction: 'next',
+                            container: $willgoneSlide
+                        });
+                        willgoneSlideEvent.stop();
+                        return;
+                    }else{
+                        e.stop();
+                    }
                 }
             }
             $cur.dataset.index = index;
@@ -1352,8 +1381,8 @@
     $win.getcurIndex = getcurIndex; //j外部控制跳转
     try {
         if (window.console && window.console.log) {
-            console.log('Powered By nodePPT, %c https://github.com/ksky521/nodePPT', 'color:red');
-            console.log('Install nodePPT: %c npm install -g nodeppt', 'color:red');
+            console.log('Powered By nodeppt, %c https://github.com/ksky521/nodeppt', 'color:red');
+            console.log('Install nodeppt: %c npm install -g nodeppt', 'color:red');
         }
     } catch (e) {}
 }(window, document, MixJS.event.broadcast, MixJS.loadJS, MixJS.loadCSS));

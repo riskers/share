@@ -1,0 +1,534 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 2016年1月24日
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>移动端页面适配方案 - By riskers</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.dark.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>移动端页面适配方案</h1>
+<p><a href="https://github.com/riskers/blog" target="_blank"><i class="fa fa-home"></i></a>
+<a href="https://github.com/riskers/" target="_blank"><i class="fa fa-github"></i></a>
+<a href="http://weibo.com/damaoxianjia123" target="_blank"><i class="fa fa-weibo"></i></a></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>1. 像素</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<p><code>width:200px</code> 代表什么？<code>px</code>到底是多长？</p>
+<ul class="fadeIn">
+<li><p><strong>设备像素</strong>
+  屏幕的物理像素，任何设备屏幕的物理像素的数量都是固定不变的，单位是<code>pt</code></p>
+</li>
+<li><p><strong>CSS像素</strong></p>
+<ul>
+<li>在CSS、JS中使用的抽象单位，单位是<code>px</code></li>
+<li>CSS像素也被称为<strong>设备独立像素</strong>(dips)，单位是<code>dp</code></li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>设备像素与CSS像素的关系</h2>
+<ul>
+<li>取决于两个条件 <ul class="fadeIn">
+<li>页面是否缩放</li>
+<li>屏幕是否为高密度</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>分辨率、屏幕尺寸和屏幕像素密度</h2>
+<p>以 iPhone5 为例</p>
+<ul class="fadeIn">
+<li><strong>分辨率</strong>： <code>1136pt x 640pt</code></li>
+<li><strong>屏幕尺寸</strong>： <code>4英寸</code></li>
+<li><p><strong>屏幕像素密度</strong>：<code>326dpi</code></p>
+<ul>
+<li>屏幕像素密度（Pibel Per Inch）简称 <code>ppi</code> ，单位是 <code>dpi</code>（dot per inch）。这里指屏幕水平或垂直每英寸有326个物理像素。原则上来说，ppi越高越好，因为图像会更加细腻清晰。</li>
+</ul>
+</li>
+<li><img src="./img/flexible/ppi.png" alt="ppi">
+</li>
+<li><a href="https://www.sven.de/dpi/" target="_blank">https://www.sven.de/dpi/</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>2. 视口</h2>
+<ul class="fadeIn">
+<li>桌面浏览器<ul class="moveIn">
+<li>浏览器窗口就是约束你的CSS布局视口（又称初始包含块），是所有CSS百分比宽度推算的根源</li>
+<li>它的作用是给<strong>CSS布局限制了一个最大宽度</strong>，视口的宽度和浏览器窗口宽度一致</li>
+</ul>
+</li>
+<li>在移动端，情况就变得很复杂了</li>
+<li>以下讨论的宽度单位都是 <strong>CSS像素</strong> (除了<code>screen.width</code>)</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>布局视口</h2>
+<ul class="fadeIn">
+<li>一个没有为移动端做优化的网页，会尽可能缩小网页让用户看到所有东西</li>
+<li>浏览器厂商为了让用户在小屏幕下网页也能够显示地很好，所以把视口宽度设置地很大，一般在 768px ~ 1024px 之间，最常见的宽度是 980px</li>
+<li><img src="./img/flexible/layout_viewport.png" alt="布局视口"></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>布局视口</h2>
+
+</hgroup><article>
+
+<ul class="fadeIn">
+<li><p><strong>设置布局视口的宽度</strong></p>
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;width=640&quot;&gt;
+</code></pre>
+</li>
+<li><p>获取布局视口尺寸</p>
+<p>  <code>document.documentElement.clientWidth/Height</code></p>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>视觉视口</h2>
+
+</hgroup><article>
+
+<ul class="fadeIn">
+<li><p>用户正在看到的网页的区域，大小是屏幕中<strong>CSS像素</strong>的数量</p>
+</li>
+<li><img src="./img/flexible/visual_layout.png" alt="视觉视口">
+</li>
+<li><p>获取视觉视口尺寸</p>
+<p>  <code>window.innerWidth/Height</code></p>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>理想视口</h2>
+
+</hgroup><article>
+
+<ul class="fadeIn">
+<li><strong>对设备来说最理想的布局视口尺寸</strong><ul class="moveIn">
+<li>布局视口忽略了手机本身的尺寸</li>
+<li>视觉视口对开发没什么用</li>
+<li>理想视口中的页面有最理想的宽度，用户进入页面不用缩放</li>
+</ul>
+</li>
+<li>使用理想视口<ul>
+<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code></li>
+<li>其实就是把布局视口设置成屏幕宽度</li>
+<li>定义理想视口是浏览器的事情，并不能简单地认为是开发者定义的，开发者只能使用</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>3. screen.width/height</h1>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>默认浏览器是安卓系统内置的浏览器，长下面那个样子。而且它使用的是Webkit而不是Blink。只有在更新安卓系统的时候才能更新它。直到安卓4.3，Google不再更新。</p>
+<p><img src="./img/flexible/android_webkit.jpg" alt="安卓webkit"></p>
+<p>而下载浏览器都返回的是理想视口尺寸。</p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<p><code>screen.width/height</code> 返回理想视口的尺寸，有严重兼容性问题，可能返回两种值： </p>
+<ul class="moveIn">
+<li>理想视口的尺寸（下载浏览器）</li>
+<li><p>屏幕的设备像素尺寸（内置浏览器）</p>
+</li>
+<li><p>测试 <code>screen.width</code>，同一设备的不同浏览器返回的值可能是不一样的：</p>
+<ul>
+<li><a href="http://quirksmode.org/m/tests/widthtest.html" target="_blank">Screen size tests</a></li>
+<li><a href="http://andreasbovens.github.io/understanding-viewport/" target="_blank">Understanding viewport</a></li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>4. 缩放</h1>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>比如一个宽度为 200px 的元素无论放大，还是200个CSS像素。但是因为这些像素被放大了，所以CSS像素也就跨越了更多的设备像素。缩小则相反。</p>
+
+</section>
+</aside><section class="slide-wrapper"><hgroup>
+<h3>缩放与设备像素、CSS像素的关系</h3>
+
+</hgroup><article>
+
+<ul class="fadeIn">
+<li>缩放是在放大或缩小<strong>CSS像素</strong></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>缩放与视口</h2>
+
+</hgroup><article>
+
+<ul class="fadeIn">
+<li><strong>缩放会影响视觉视口的尺寸</strong><ul class="fadeIn">
+<li>因为缩放了CSS像素</li>
+</ul>
+</li>
+<li><strong>用户缩放不会影响布局视口</strong> <ul class="fadeIn">
+<li>注意，这是『用户缩放』，后面会说开发者设置缩放的情况</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>查看缩放比例</h2>
+<img src="./img/flexible/ratio.png" alt="查看缩放比例">
+<blockquote>
+<p>这里的 0.3 是相对于<strong>理想视口</strong>的</p>
+</blockquote>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>计算缩放比例</h2>
+<p>在下载浏览器中，可以这么算（理想视口与视觉视口的比）：</p>
+<p><code>zoom level = screen.width / window.innerWidth</code></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>禁止缩放</h2>
+
+</hgroup><article>
+
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot;&gt;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>使用<code>initial-scale</code>有一个副作用：同时也会将布局视口的尺寸设置为缩放后的尺寸。所以<code>initial-scale=1</code>与<code>width=device-width</code>的效果是一样的。</p>
+
+</section>
+</aside><section class="slide-wrapper"><hgroup>
+<h2>设置缩放</h2>
+
+</hgroup><article>
+
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>5. 完美视口</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<p>解决各种浏览器兼容问题的理想视口设置</p>
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>6. 设备像素比</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>DPR</h2>
+<ul class="moveIn">
+<li><code>window.devicePixelRatio</code></li>
+<li>与设备像素、CSS像素的关系 <ul class="fadeIn">
+<li><code>dpr = 设备像素 / CSS像素</code></li>
+</ul>
+</li>
+<li>与视口的关系<ul class="fadeIn">
+<li><code>dpr = 屏幕横向设备像素 / 理想视口的宽</code></li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>7. 适配方案</h1>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>做PC页面的时候，我们按照设计图的尺寸来就好。</p>
+<p>做移动端页面的时候，设计师给了一份宽度为640px的设计图。那么，我们把这份设计图实现在各个手机上的过程就是『适配』。</p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<h2>什么是适配</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<p>以这个为例</p>
+<img src="./img/flexible/app-demo.jpg" alt="app-demo">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>适配方案一：固定高度，宽度自适应</h2>
+<pre><code class="html">&lt;!--这样设置之后，我们就可以不用管手机屏幕的尺寸进行开发了--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+</code></pre>
+<ul class="moveIn">
+<li><a href="http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-fixed-height.html" target="_blank">demo</a></li>
+<li>配合媒体查询，解决大多数需求</li>
+<li><a href="http://xw.qq.com/index.htm" target="_blank">腾讯</a> <a href="http://m.jd.com/" target="_blank">京东</a> <a href="https://www.baidu.com/" target="_blank">百度</a> <a href="https://www.tmall.com/" target="_blank">天猫</a> <a href="http://www.amazon.cn/" target="_blank">亚马逊</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>适配方案二：固定宽度，viewport缩放</h2>
+<pre><code class="html">&lt;!--640 是根据设计图定下的，0.5 是根据屏幕宽度动态生成的--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;
+    width=640,
+    initial-scale=0.5,maximum-scale=0.5,minimum-scale=0.5,
+    user-scalable=no&quot;&gt;
+</code></pre>
+<ul class="moveIn">
+<li><a href="http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-fixed-width.html" target="_blank">demo</a></li>
+<li><a href="http://m.lizhi.fm/" target="_blank">荔枝FM</a> <a href="http://c.3g.163.com/CreditMarket/default.html" target="_blank">网易新闻</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>生成的viewport告诉浏览器网页的布局视口使用 640px，然后把页面缩放成50%，这是绝对的等比例缩放。图片、文字等等所有元素都被缩放在手机屏幕中。</p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<h2>适配方案二：固定宽度，viewport缩放</h2>
+<p><strong>设计图、页面宽度、viewport width使用一个宽度，浏览器帮我们完成缩放。单位使用px即可</strong></p>
+<img src="./img/flexible/width-demo.gif" alt="width-demo">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>适配方案三：rem做宽度，viewport缩放</h2>
+<ul class="moveIn">
+<li><a href="http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-rem.html" target="_blank">demo</a></li>
+<li><a href="https://m.taobao.com" target="_blank">淘宝</a> <a href="https://github.com/amfe/article/issues/17" target="_blank">使用Flexible实现手淘H5页面的终端适配</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>适配方案三：rem做宽度，viewport缩放</h2>
+<img src="./img/flexible/rem.png" alt="rem">
+<p>动态生成：</p>
+<ol>
+<li>屏幕宽度设置 <code>rem</code>的大小，即给<code>&lt;html&gt;</code>设置<code>font-size</code></li>
+<li>viewport init-scale</li>
+<li>根据设备像素比（window.devicePixelRatio）给<code>&lt;html&gt;</code>设置<code>data-dpr</code></li>
+</ol>
+<p><strong>可以让不同设备的<code>rem</code>或<code>px</code>都显示一样的长度</strong></p>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>这个长度是相对于设备本身的，不同设备的<code>rem</code>显示一样的长度（CSS像素）</p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<h2>适配方案三：rem做宽度，viewport缩放</h2>
+<h3>设置rem</h3>
+<p><strong>得到一个与屏幕宽度相关的单位</strong></p>
+<img src="./img/flexible/flexible.png" alt="rem">
+<pre><code class="css">html{
+    font-size: 屏幕宽度 / 10; 
+}
+.btn{
+    width:8.75rem;
+    height:1.25rem;
+}
+</code></pre>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>设备像素比是2，缩放为0.5，<code>data-dpr</code>为2</p>
+<p>某元素字体大小应该为12px，因为<code>[data-dpr=2]</code>，变成24px，但又因为页面缩放50%，所以还是12px</p>
+<p><strong>不同设备下的<code>px</code>显示一样的长度</strong></p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<h2>适配方案三：rem做宽度，viewport缩放</h2>
+<h3>设置 viewport 缩放 和 data-dpr</h3>
+<p><strong>适配高密度屏幕手机的<code>px</code>单位</strong></p>
+<pre><code class="css">.a{
+  font-size:12px;
+}
+[data-dpr=&quot;2&quot;] .a{
+  font-size: 24px;
+}
+[data-dpr=&quot;3&quot;] .a{
+  font-size: 36px;
+}
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>8. 总结</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<img src="./img/flexible/demo.png" alt="demo">
+<p>第一种方案做简单页面还行，做复杂一点的就有点麻烦了。</p>
+
+</article></section></slide>
+<slide class="slide hasnote"><aside class="note">
+<section>
+<p>这是我曾经做过的一个页面，『PK』要和左右两张图平行，而且下面的『不怒自威』、『义薄云天』和下面的战斗力位置都要固定，不能有差。如果用第一种方案，可能各个元素就要绝对定位，然后各种百分比来定位了。且不说计算麻烦，而且辛苦一番最后的结果尺寸是和设计图有出入的。</p>
+
+</section>
+</aside><section class="slide-wrapper"><article>
+<img src="./img/flexible/360demo.png" alt="PK活动">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>第二种方案和第三种方案区别</h2>
+<p>目前我唯一知道的区别就是第三种方案更加灵活，有两种单位可以使用，想让元素适配的时候就用<code>rem</code>，想让文字不缩放的时候就用<code>px</code></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>参考资料</h1>
+<ul>
+<li><a href="http://quirksmode.org/mobile/" target="_blank">ppk的移动端系列文章</a></li>
+<li><a href="http://www.quirksmode.org/blog/archives/2013/11/screenwidth_is.html" target="_blank">screen.width is useless</a></li>
+<li><a href="http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html" target="_blank">devicePixelRatio</a></li>
+<li><p><a href="http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html" target="_blank">More about devicePixelRatio</a></p>
+</li>
+<li><p><a href="http://div.io/topic/1092" target="_blank">移动端高清、多屏适配方案</a></p>
+</li>
+<li><a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank">从网易与淘宝的font-size思考前端设计稿与工作流</a></li>
+<li><a href="http://js8.in/2015/12/12/%E6%89%8B%E6%9C%BA%E7%99%BE%E5%BA%A6%E7%A7%BB%E5%8A%A8%E9%80%82%E9%85%8D%E5%88%87%E5%9B%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D/" target="_blank">百度方案</a></li>
+<li><a href="http://f2e.souche.com/blog/yi-dong-duan-zi-gua-ying-fang-an/" target="_blank">移动端自适应方案</a> 介绍了 flex 布局和rem方案</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>原文</h1>
+<ul>
+<li><a href="https://github.com/riskers/blog/issues/17" target="_blank">移动端适配方案(上)</a></li>
+<li><a href="https://github.com/riskers/blog/issues/18" target="_blank">移动端适配方案(下)</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>END</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>切图神器</h1>
+<ul>
+<li><a href="http://www.getmarkman.com/" target="_blank">MarkMan</a> / <a href="http://www.fancynode.com.cn/pxcook/home" target="_blank">PxCook</a></li>
+<li><a href="http://www.uisdc.com/tag/assistor-ps" target="_blank">AssistorPS</a> / <a href="http://www.cutterman.cn/v2/parker" target="_blank">parker</a></li>
+<li><a href="http://www.cutterman.cn/v2/cutterman" target="_blank">cutterman</a></li>
+<li><a href="http://www.browsersync.cn/" target="_blank">browsersync</a></li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'move',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
