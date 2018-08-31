@@ -8,11 +8,9 @@ date: 2018年8月24日
 [slide]
 # Chrome Extension
 
-## 15 mins
-
-<!-- [<i class="fa fa-home"></i>](https://github.com/riskers/blog)
+[<i class="fa fa-home"></i>](https://github.com/riskers/blog)
 [<i class="fa fa-github"></i>](https://github.com/riskers/)
-[<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123) -->
+[<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123)
 
 [slide data-transition="zoomin"]
 * Chrome Extension 能做什么 {:&.fadeIn}
