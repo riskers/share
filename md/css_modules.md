@@ -8,8 +8,6 @@ date: 2017年4月26日
 
 # CSS Modules
 
-## 重峦
-
 [<i class="fa fa-home"></i>](https://github.com/riskers/blog)
 [<i class="fa fa-github"></i>](https://github.com/riskers/)
 [<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123)
