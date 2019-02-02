@@ -8,9 +8,10 @@ prismTheme: tomorrow
 #  Riskers Share {.text-shadow}
 ---
 
-- [flexible](https://riskers.github.io/share/flexible){.bounce}{.text-subtitle}
-- [css module](https://riskers.github.io/share/css_modules){.bounce}{.text-subtitle}
-- [chrome extension](https://riskers.github.io/share/chrome_extension){.bounce}{.text-subtitle}
+- [flexible](https://riskers.github.io/share/flexible){.bounce}
+- [css module](https://riskers.github.io/share/css_modules){.bounce}
+- [chrome extension](https://riskers.github.io/share/chrome_extension){.bounce}
+{.description}
 
 ---
 

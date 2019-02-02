@@ -260,7 +260,7 @@ zoom level = screen.width / window.innerWidth
 ```
 
 * [demo](http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-fixed-width.html) {:&.moveIn}
-* [荔枝FM](http://m.lizhi.fm/) [网易新闻](http://c.3g.163.com/CreditMarket/default.html)
+* [荔枝 FM](http://m.lizhi.fm/) [网易新闻](http://c.3g.163.com/CreditMarket/default.html)
 
 <slide>
 ## 适配方案二：固定宽度，viewport缩放
