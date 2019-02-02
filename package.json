@@ -9,8 +9,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodeppt start -w -d md",
-    "publish": "nodeppt generate md share -a"
   },
   "license": "ISC"
 }
