@@ -10,14 +10,11 @@ notifications:
     on_success: change
     on_failure: always
 
-before_install:
-  - chmod +x build.sh
-
 install:
   - npm install
 
 script:
-  - ./build.sh
+  - sh build.sh
 
 after_script:
   - cd dist
@@ -30,7 +27,6 @@ after_script:
 branches:
   only:
     - master
-    - nodepptv2
 
 env:
   global:
