@@ -2,6 +2,9 @@ title: 移动端页面适配方案
 speaker: riskers
 theme: tomorrow
 url: https://riskers.github.io/share/flexible
+js:
+  - https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
+  - ./gtag.js
 
 
 <slide :class="aligncenter">

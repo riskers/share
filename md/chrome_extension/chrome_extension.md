@@ -2,6 +2,9 @@ title: Chrome Extension
 speaker: riskers
 prismTheme: dark
 url: https://riskers.github.io/share/chrome_extension
+js:
+  - https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
+  - ./gtag.js
 
 
 <slide :class="aligncenter">

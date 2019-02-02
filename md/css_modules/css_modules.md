@@ -2,6 +2,9 @@ title: CSS Modules 介绍以及在项目中的使用
 speaker: riskers
 prismTheme: dark
 url: https://riskers.github.io/share/css_modules
+js:
+  - https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
+  - ./gtag.js
 
 <slide :class="aligncenter">
 
