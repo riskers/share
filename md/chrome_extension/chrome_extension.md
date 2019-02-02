@@ -1,16 +1,17 @@
 title: Chrome Extension
 speaker: riskers
-transition: move
 prismTheme: dark
-date: 2018年8月24日
+url: https://riskers.github.io/share/chrome_extension
 
 
-<slide>
+<slide :class="aligncenter">
+
 # Chrome Extension
+---
 
-[<i class="fa fa-home"></i>](https://github.com/riskers/blog)
-[<i class="fa fa-github"></i>](https://github.com/riskers/)
-[<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123)
+[:fa-home:](https://github.com/riskers/blog)
+[:fa-github:](https://github.com/riskers/)
+[:fa-weibo:](http://weibo.com/damaoxianjia123)
 
 [slide data-transition="zoomin"]
 * Chrome Extension 能做什么 {:&.fadeIn}
@@ -138,12 +139,12 @@ date: 2018年8月24日
 
 ****************************************************************************************************************
 
-[slide data-transition="zoomin"]
+<slide>
 # THANKS
 
 ****************************************************************************************************************
 
-[slide data-transition="zoomin"]
+<slide>
 # Q & A
 
 ****************************************************************************************************************

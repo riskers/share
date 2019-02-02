@@ -1,16 +1,16 @@
 title: CSS Modules 介绍以及在项目中的使用
 speaker: riskers
-transition: move
 prismTheme: dark
-date: 2017年4月26日
+url: https://riskers.github.io/share/css_modules
 
-<slide>
+<slide :class="aligncenter">
 
 # CSS Modules
+---
 
-[<i class="fa fa-home"></i>](https://github.com/riskers/blog)
-[<i class="fa fa-github"></i>](https://github.com/riskers/)
-[<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123)
+[:fa-home:](https://github.com/riskers/blog)
+[:fa-github:](https://github.com/riskers/)
+[:fa-weibo:](http://weibo.com/damaoxianjia123)
 
 ****************************************************************************************************************
 
