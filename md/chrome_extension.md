@@ -5,7 +5,7 @@ theme: dark
 date: 2018年8月24日
 
 
-[slide]
+<slide>
 # Chrome Extension
 
 [<i class="fa fa-home"></i>](https://github.com/riskers/blog)
@@ -35,32 +35,32 @@ date: 2018年8月24日
 * contextMenus
 * override
 
-[slide]
+<slide>
 # popup - 常用选项
 
-![](/img/chrome_extension/popup.gif)
+![](./img/chrome_extension/popup.gif)
 
-[slide]
+<slide>
 # options - 配置
 
-![](/img/chrome_extension/options.gif)
+![](./img/chrome_extension/options.gif)
 
-[slide]
+<slide>
 # omnibox - 搜索栏
 
-![](/img/chrome_extension/omnibox.gif)
+![](./img/chrome_extension/omnibox.gif)
 
-[slide]
+<slide>
 # contextMenus - 右键菜单
 
-[slide]
+<slide>
 # override - 自定义 Chrome 页面
 
 * history: 浏览历史 {:&.fadeIn}
 * newtab: 新 Tab
 * bookmarks: 收藏夹
 
-[slide]
+<slide>
 # 其他
 
 * [tabs](https://developer.chrome.com/extensions/tabs) {:&.fadeIn}
@@ -80,17 +80,17 @@ date: 2018年8月24日
 * inject_scripts 注入 CSS / JavaScript?
   * 获取 `window` 变量
 
-[slide]
+<slide>
 
 # 三者通信
 
-![](/img/chrome_extension/background_content_inject_connect.png)
+![](./img/chrome_extension/background_content_inject_connect.png)
 
-[slide]
+<slide>
 * `background <-> content_scripts`: [chrome.runtime.onMessage](https://developer.chrome.com/apps/runtime#event-onMessage) / [chrome.runtime.sendMessage](https://developer.chrome.com/apps/runtime#method-sendMessage)
 * `content_scripts <-> inject_scripts`: [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage) / [window.onMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowEventHandlers/onmessage)
 
-[slide]
+<slide>
 # 三者权限
 
 | | Chrome API | DOM | window 变量 |
@@ -114,7 +114,7 @@ date: 2018年8月24日
 
 ## 无审核，无监控，十分钟上线
 
-[slide]
+<slide>
 # Chrome 禁止使用非 web store 下载的扩展
 
 * Windows Chrome 用户自己在 chrome://extension 安装 crx 的方法在 13 年就已经被[禁止](https://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html)
@@ -123,14 +123,14 @@ date: 2018年8月24日
 
 * [inline-install 被禁止](https://blog.chromium.org/2018/06/improving-extension-transparency-for.html)
 
-[slide]
+<slide>
 
 # [permissions_warning](https://developer.chrome.com/apps/permission_warnings#permissions_with_warnings)
 
-[slide]
-![提示权限](/img/chrome_extension/a_lot_of_warnings.png)
+<slide>
+![提示权限](./img/chrome_extension/a_lot_of_warnings.png)
 
-[slide]
+<slide>
 
 # 查看源码
 

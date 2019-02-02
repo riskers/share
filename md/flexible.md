@@ -5,17 +5,17 @@ theme: dark
 date: 2016年1月24日
 
 
-[slide]
+<slide>
 # 移动端页面适配方案
 
 [<i class="fa fa-home"></i>](https://github.com/riskers/blog)
 [<i class="fa fa-github"></i>](https://github.com/riskers/)
 [<i class="fa fa-weibo"></i>](http://weibo.com/damaoxianjia123)
 
-[slide]
+<slide>
 # 1. 像素
 
-[slide]
+<slide>
 `width:200px` 代表什么？`px`到底是多长？
 
 * **设备像素** {:&.fadeIn}
@@ -26,7 +26,7 @@ date: 2016年1月24日
     * CSS像素也被称为**设备独立像素**(dips)，单位是`dp`
 
 
-[slide]
+<slide>
 ## 设备像素与CSS像素的关系
 
 * 取决于两个条件 
@@ -34,7 +34,7 @@ date: 2016年1月24日
     * 屏幕是否为高密度
 
 
-[slide]
+<slide>
 ## 分辨率、屏幕尺寸和屏幕像素密度 
 
 以 iPhone5 为例
@@ -44,10 +44,10 @@ date: 2016年1月24日
 * **屏幕像素密度**：`326dpi`
     * 屏幕像素密度（Pibel Per Inch）简称 `ppi` ，单位是 `dpi`（dot per inch）。这里指屏幕水平或垂直每英寸有326个物理像素。原则上来说，ppi越高越好，因为图像会更加细腻清晰。
 
-* ![ppi](/img/flexible/ppi.png)
+* ![ppi](./img/flexible/ppi.png)
 * https://www.sven.de/dpi/
 
-[slide]
+<slide>
 ## 2. 视口
 
 * 桌面浏览器 {:&.fadeIn}
@@ -56,13 +56,13 @@ date: 2016年1月24日
 * 在移动端，情况就变得很复杂了
 * 以下讨论的宽度单位都是 **CSS像素** (除了`screen.width`)
 
-[slide]
+<slide>
 ## 布局视口
 * 一个没有为移动端做优化的网页，会尽可能缩小网页让用户看到所有东西 {:&.fadeIn}
 * 浏览器厂商为了让用户在小屏幕下网页也能够显示地很好，所以把视口宽度设置地很大，一般在 768px ~ 1024px 之间，最常见的宽度是 980px
-* ![布局视口](/img/flexible/layout_viewport.png)
+* ![布局视口](./img/flexible/layout_viewport.png)
 
-[slide]
+<slide>
 ## 布局视口
 ----
 
@@ -76,19 +76,19 @@ date: 2016年1月24日
  
     `document.documentElement.clientWidth/Height`
 
-[slide]
+<slide>
 ## 视觉视口
 ----
 
 * 用户正在看到的网页的区域，大小是屏幕中**CSS像素**的数量 {:&.fadeIn}
 
-* ![视觉视口](/img/flexible/visual_layout.png)
+* ![视觉视口](./img/flexible/visual_layout.png)
 * 获取视觉视口尺寸
     
     `window.innerWidth/Height` 
 
 
-[slide]
+<slide>
 ## 理想视口
 ----
 
@@ -101,11 +101,11 @@ date: 2016年1月24日
     * 其实就是把布局视口设置成屏幕宽度
     * 定义理想视口是浏览器的事情，并不能简单地认为是开发者定义的，开发者只能使用
 
-[slide]
+<slide>
 # 3. screen.width/height
 
 
-[slide]
+<slide>
 
 `screen.width/height` 返回理想视口的尺寸，有严重兼容性问题，可能返回两种值： 
 
@@ -120,16 +120,16 @@ date: 2016年1月24日
 [note]
 默认浏览器是安卓系统内置的浏览器，长下面那个样子。而且它使用的是Webkit而不是Blink。只有在更新安卓系统的时候才能更新它。直到安卓4.3，Google不再更新。
     
-![安卓webkit](/img/flexible/android_webkit.jpg)
+![安卓webkit](./img/flexible/android_webkit.jpg)
     
 而下载浏览器都返回的是理想视口尺寸。
 [/note]
 
 
-[slide]
+<slide>
 # 4. 缩放
 
-[slide]
+<slide>
 ### 缩放与设备像素、CSS像素的关系
 ----
 
@@ -140,7 +140,7 @@ date: 2016年1月24日
 [/note]
 
 
-[slide]
+<slide>
 ## 缩放与视口
 ---- 
 
@@ -150,14 +150,14 @@ date: 2016年1月24日
     * 注意，这是『用户缩放』，后面会说开发者设置缩放的情况 {:&.fadeIn}
 
 
-[slide]
+<slide>
 ## 查看缩放比例
 
-![查看缩放比例](/img/flexible/ratio.png)
+![查看缩放比例](./img/flexible/ratio.png)
 
 >这里的 0.3 是相对于**理想视口**的 
 
-[slide]
+<slide>
 ## 计算缩放比例
 
 在下载浏览器中，可以这么算（理想视口与视觉视口的比）：
@@ -166,7 +166,7 @@ date: 2016年1月24日
 zoom level = screen.width / window.innerWidth
 `
 
-[slide]
+<slide>
 ## 禁止缩放
 ---
 
@@ -174,7 +174,7 @@ zoom level = screen.width / window.innerWidth
 <meta name="viewport" content="user-scalable=no">
 ```
 
-[slide]
+<slide>
 ## 设置缩放
 ---
 
@@ -186,20 +186,20 @@ zoom level = screen.width / window.innerWidth
 使用`initial-scale`有一个副作用：同时也会将布局视口的尺寸设置为缩放后的尺寸。所以`initial-scale=1`与`width=device-width`的效果是一样的。
 [/note]
 
-[slide]
+<slide>
 # 5. 完美视口
 
-[slide]
+<slide>
 解决各种浏览器兼容问题的理想视口设置
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1">
 ```
 
-[slide]
+<slide>
 # 6. 设备像素比
 
-[slide]
+<slide>
 ## DPR 
 * `window.devicePixelRatio` {:&.moveIn}
 * 与设备像素、CSS像素的关系 
@@ -208,10 +208,10 @@ zoom level = screen.width / window.innerWidth
     * `dpr = 屏幕横向设备像素 / 理想视口的宽` {:&.fadeIn}
 
 
-[slide]
+<slide>
 # 7. 适配方案
 
-[slide]
+<slide>
 ## 什么是适配
 
 [note]
@@ -220,13 +220,13 @@ zoom level = screen.width / window.innerWidth
 做移动端页面的时候，设计师给了一份宽度为640px的设计图。那么，我们把这份设计图实现在各个手机上的过程就是『适配』。
 [/note]
 
-[slide]
+<slide>
 以这个为例
 
-![app-demo](/img/flexible/app-demo.jpg)
+![app-demo](./img/flexible/app-demo.jpg)
 
 
-[slide]
+<slide>
 ## 适配方案一：固定高度，宽度自适应
 
 ```html
@@ -240,7 +240,7 @@ zoom level = screen.width / window.innerWidth
 * 配合媒体查询，解决大多数需求
 * [腾讯](http://xw.qq.com/index.htm) [京东](http://m.jd.com/) [百度](https://www.baidu.com/) [天猫](https://www.tmall.com/) [亚马逊](http://www.amazon.cn/)
 
-[slide]
+<slide>
 ## 适配方案二：固定宽度，viewport缩放
 
 
@@ -255,27 +255,27 @@ zoom level = screen.width / window.innerWidth
 * [demo](http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-fixed-width.html) {:&.moveIn}
 * [荔枝FM](http://m.lizhi.fm/) [网易新闻](http://c.3g.163.com/CreditMarket/default.html)
 
-[slide]
+<slide>
 ## 适配方案二：固定宽度，viewport缩放
 
 **设计图、页面宽度、viewport width使用一个宽度，浏览器帮我们完成缩放。单位使用px即可**
 
-![width-demo](/img/flexible/width-demo.gif)
+![width-demo](./img/flexible/width-demo.gif)
 
 [note]
 生成的viewport告诉浏览器网页的布局视口使用 640px，然后把页面缩放成50%，这是绝对的等比例缩放。图片、文字等等所有元素都被缩放在手机屏幕中。
 [/note]
 
-[slide]
+<slide>
 ## 适配方案三：rem做宽度，viewport缩放
 
 * [demo](http://www.meow.re/demo/screen-adaptation-in-mobileweb/app-rem.html) {:&.moveIn}
 * [淘宝](https://m.taobao.com) [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
 
-[slide]
+<slide>
 ## 适配方案三：rem做宽度，viewport缩放
 
-![rem](/img/flexible/rem.png)
+![rem](./img/flexible/rem.png)
 
 动态生成：
 
@@ -285,12 +285,12 @@ zoom level = screen.width / window.innerWidth
 
 **可以让不同设备的`rem`或`px`都显示一样的长度**
 
-[slide]
+<slide>
 ## 适配方案三：rem做宽度，viewport缩放
 ### 设置rem
 **得到一个与屏幕宽度相关的单位**
 
-![rem](/img/flexible/flexible.png)
+![rem](./img/flexible/flexible.png)
 
 ```css
 html{
@@ -307,7 +307,7 @@ html{
 这个长度是相对于设备本身的，不同设备的`rem`显示一样的长度（CSS像素）
 [/note]
 
-[slide]
+<slide>
 ## 适配方案三：rem做宽度，viewport缩放
 ### 设置 viewport 缩放 和 data-dpr
 **适配高密度屏幕手机的`px`单位**
@@ -332,28 +332,28 @@ html{
 **不同设备下的`px`显示一样的长度**
 [/note]
 
-[slide]
+<slide>
 # 8. 总结
 
-[slide]
+<slide>
 
-![demo](/img/flexible/demo.png)
+![demo](./img/flexible/demo.png)
 
 第一种方案做简单页面还行，做复杂一点的就有点麻烦了。
 
-[slide]
-![PK活动](/img/flexible/360demo.png)
+<slide>
+![PK活动](./img/flexible/360demo.png)
 
 [note]
 这是我曾经做过的一个页面，『PK』要和左右两张图平行，而且下面的『不怒自威』、『义薄云天』和下面的战斗力位置都要固定，不能有差。如果用第一种方案，可能各个元素就要绝对定位，然后各种百分比来定位了。且不说计算麻烦，而且辛苦一番最后的结果尺寸是和设计图有出入的。
 [/note]
 
-[slide]
+<slide>
 ## 第二种方案和第三种方案区别
 
 目前我唯一知道的区别就是第三种方案更加灵活，有两种单位可以使用，想让元素适配的时候就用`rem`，想让文字不缩放的时候就用`px`
 
-[slide]
+<slide>
 # 参考资料
 
 * [ppk的移动端系列文章](http://quirksmode.org/mobile/) 
@@ -366,16 +366,16 @@ html{
 * [百度方案](http://js8.in/2015/12/12/%E6%89%8B%E6%9C%BA%E7%99%BE%E5%BA%A6%E7%A7%BB%E5%8A%A8%E9%80%82%E9%85%8D%E5%88%87%E5%9B%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D/)
 * [移动端自适应方案](http://f2e.souche.com/blog/yi-dong-duan-zi-gua-ying-fang-an/) 介绍了 flex 布局和rem方案
 
-[slide]
+<slide>
 # 原文
 
 * [移动端适配方案(上)](https://github.com/riskers/blog/issues/17)
 * [移动端适配方案(下)](https://github.com/riskers/blog/issues/18)
 
-[slide]
+<slide>
 # END
 
-[slide]
+<slide>
 # 切图神器
 
 * [MarkMan](http://www.getmarkman.com/) / [PxCook](http://www.fancynode.com.cn/pxcook/home) 

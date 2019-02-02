@@ -5,11 +5,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "nodeppt": "^1.4.1"
+    "nodeppt": "^2.0.3"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodeppt start -w -d md" ,
+    "start": "nodeppt start -w -d md",
     "publish": "nodeppt generate md share -a"
   },
   "license": "ISC"
