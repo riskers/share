@@ -1,7 +1,7 @@
 title: CSS Modules 介绍以及在项目中的使用
 speaker: riskers
 transition: move
-theme: dark
+prismTheme: dark
 date: 2017年4月26日
 
 <slide>
@@ -150,7 +150,7 @@ class Demo extends React.Component {
 
 <slide>
 
-![react渲染后的DOM](./img/css_modules/d1.png)
+![react渲染后的DOM](./img/d1.png)
 
   [note]
   解决了什么问题？
@@ -191,7 +191,7 @@ module: {
 }
 ```
 
-![styles对象](./img/css_modules/d2.png)
+![styles对象](./img/d2.png)
 
   [note]
   modules: 开启 CSS Modules

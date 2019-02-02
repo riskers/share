@@ -1,7 +1,7 @@
 title: 移动端页面适配方案
 speaker: riskers
 transition: move
-theme: dark
+prismTheme: tomorrow
 date: 2016年1月24日
 
 
@@ -44,7 +44,7 @@ date: 2016年1月24日
 * **屏幕像素密度**：`326dpi`
     * 屏幕像素密度（Pibel Per Inch）简称 `ppi` ，单位是 `dpi`（dot per inch）。这里指屏幕水平或垂直每英寸有326个物理像素。原则上来说，ppi越高越好，因为图像会更加细腻清晰。
 
-* ![ppi](./img/flexible/ppi.png)
+* ![ppi](./img/ppi.png)
 * https://www.sven.de/dpi/
 
 <slide>
@@ -60,7 +60,7 @@ date: 2016年1月24日
 ## 布局视口
 * 一个没有为移动端做优化的网页，会尽可能缩小网页让用户看到所有东西 {:&.fadeIn}
 * 浏览器厂商为了让用户在小屏幕下网页也能够显示地很好，所以把视口宽度设置地很大，一般在 768px ~ 1024px 之间，最常见的宽度是 980px
-* ![布局视口](./img/flexible/layout_viewport.png)
+* ![布局视口](./img/layout_viewport.png)
 
 <slide>
 ## 布局视口
@@ -82,7 +82,7 @@ date: 2016年1月24日
 
 * 用户正在看到的网页的区域，大小是屏幕中**CSS像素**的数量 {:&.fadeIn}
 
-* ![视觉视口](./img/flexible/visual_layout.png)
+* ![视觉视口](./img/visual_layout.png)
 * 获取视觉视口尺寸
     
     `window.innerWidth/Height` 
@@ -120,7 +120,7 @@ date: 2016年1月24日
 [note]
 默认浏览器是安卓系统内置的浏览器，长下面那个样子。而且它使用的是Webkit而不是Blink。只有在更新安卓系统的时候才能更新它。直到安卓4.3，Google不再更新。
     
-![安卓webkit](./img/flexible/android_webkit.jpg)
+![安卓webkit](./img/android_webkit.jpg)
     
 而下载浏览器都返回的是理想视口尺寸。
 [/note]
@@ -153,7 +153,7 @@ date: 2016年1月24日
 <slide>
 ## 查看缩放比例
 
-![查看缩放比例](./img/flexible/ratio.png)
+![查看缩放比例](./img/ratio.png)
 
 >这里的 0.3 是相对于**理想视口**的 
 
@@ -223,7 +223,7 @@ zoom level = screen.width / window.innerWidth
 <slide>
 以这个为例
 
-![app-demo](./img/flexible/app-demo.jpg)
+![app-demo](./img/app-demo.jpg)
 
 
 <slide>
@@ -260,7 +260,7 @@ zoom level = screen.width / window.innerWidth
 
 **设计图、页面宽度、viewport width使用一个宽度，浏览器帮我们完成缩放。单位使用px即可**
 
-![width-demo](./img/flexible/width-demo.gif)
+![width-demo](./img/width-demo.gif)
 
 [note]
 生成的viewport告诉浏览器网页的布局视口使用 640px，然后把页面缩放成50%，这是绝对的等比例缩放。图片、文字等等所有元素都被缩放在手机屏幕中。
@@ -275,7 +275,7 @@ zoom level = screen.width / window.innerWidth
 <slide>
 ## 适配方案三：rem做宽度，viewport缩放
 
-![rem](./img/flexible/rem.png)
+![rem](./img/rem.png)
 
 动态生成：
 
@@ -290,7 +290,7 @@ zoom level = screen.width / window.innerWidth
 ### 设置rem
 **得到一个与屏幕宽度相关的单位**
 
-![rem](./img/flexible/flexible.png)
+![rem](./img/flexible.png)
 
 ```css
 html{
@@ -337,12 +337,12 @@ html{
 
 <slide>
 
-![demo](./img/flexible/demo.png)
+![demo](./img/demo.png)
 
 第一种方案做简单页面还行，做复杂一点的就有点麻烦了。
 
 <slide>
-![PK活动](./img/flexible/360demo.png)
+![PK活动](./img/360demo.png)
 
 [note]
 这是我曾经做过的一个页面，『PK』要和左右两张图平行，而且下面的『不怒自威』、『义薄云天』和下面的战斗力位置都要固定，不能有差。如果用第一种方案，可能各个元素就要绝对定位，然后各种百分比来定位了。且不说计算麻烦，而且辛苦一番最后的结果尺寸是和设计图有出入的。

@@ -1,7 +1,7 @@
 title: Chrome Extension
 speaker: riskers
 transition: move
-theme: dark
+prismTheme: dark
 date: 2018年8月24日
 
 
@@ -38,17 +38,17 @@ date: 2018年8月24日
 <slide>
 # popup - 常用选项
 
-![](./img/chrome_extension/popup.gif)
+![](./img/popup.gif)
 
 <slide>
 # options - 配置
 
-![](./img/chrome_extension/options.gif)
+![](./img/options.gif)
 
 <slide>
 # omnibox - 搜索栏
 
-![](./img/chrome_extension/omnibox.gif)
+![](./img/omnibox.gif)
 
 <slide>
 # contextMenus - 右键菜单
@@ -84,7 +84,7 @@ date: 2018年8月24日
 
 # 三者通信
 
-![](./img/chrome_extension/background_content_inject_connect.png)
+![](./img/background_content_inject_connect.png)
 
 <slide>
 * `background <-> content_scripts`: [chrome.runtime.onMessage](https://developer.chrome.com/apps/runtime#event-onMessage) / [chrome.runtime.sendMessage](https://developer.chrome.com/apps/runtime#method-sendMessage)
@@ -128,7 +128,7 @@ date: 2018年8月24日
 # [permissions_warning](https://developer.chrome.com/apps/permission_warnings#permissions_with_warnings)
 
 <slide>
-![提示权限](./img/chrome_extension/a_lot_of_warnings.png)
+![提示权限](./img/a_lot_of_warnings.png)
 
 <slide>
 
