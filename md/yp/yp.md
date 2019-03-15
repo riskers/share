@@ -33,6 +33,8 @@ theme: tomorrow
 ![](https://i.imgur.com/HiiJiej.png)
 
 <slide>
+## 解决策略
+-----
 
 * 拆分
 * 解耦
@@ -47,28 +49,104 @@ theme: tomorrow
 * 配置系统 + 服务注册\: nacos
 * RPC\: dubbo
 
-<slide>
+<slide :class="aligncenter">
 ## mibench - 压测平台
-------
 
-![](https://i.imgur.com/NAX2vSV.png)
-
+<slide image="https://i.imgur.com/NAX2vSV.png">
 
 <slide>
 
-* 了解性能瓶颈
-* ...
+* 部署便捷
+* 性能瓶颈
+* 使压测可重放
+* 具备一定的业务压测
 
 <slide>
+
+* 智能 QPS 控制
+* 压测性能好于任何一个被压测接口
+
+<slide>
+
+![](https://i.imgur.com/dA36z9X.png)
+
+<slide>
+
+* 服务器无状态
+* 生成报告、存档
+
+<slide>
+
+![](https://i.imgur.com/NGJafQn.png)
+
+<slide>
+
+* 具备调试、权限管理
+
+<slide>
+
+![](https://i.imgur.com/MZaEOOJ.png)
+
+<slide>
+
+* 系统可支持水平扩展
+* Agent 服务治理
+
+<slide>
+
+![](https://i.imgur.com/FiTYHXJ.png)
+
+<slide>
+## 365{.text-data}
+
+:::note
+上线一年 365 个接口
+:::
+
+<slide>
+## 3500{.text-data}
+:::note
+上线一年 3500 份测试报告
+:::
+
+<slide :class="aligncenter">
 ## dubbo - RPC
 ----
 
-详见[wiki](https://wiki.n.miui.com/display/MIOTStore/dubbo-demo)
+<slide>
+
+* 泛化调用
+* gateway 调用
+* 统一结果输出格式
+* 接入 zander
 
 <slide>
+
+* [doc](https://wiki.n.miui.com/display/MIOTStore/dubbo-demo)
+
+:::note
+详见这份文档
+:::
+
+<slide>
+## 219{.text-data}
+
+:::note
+219 个 provider 实例
+:::
+
+<slide>
+## 353{.text-data}
+
+:::note
+353 个 consumer 实例
+:::
+
+<slide :class="aligncenter">
 ## nacos - 服务拆分
 ----
 
+<slide>
 ![](https://i.imgur.com/7xVqPQM.png)
 
 <slide>
@@ -81,7 +159,7 @@ theme: tomorrow
 
 详见[wiki](https://wiki.n.miui.com/display/MIOTStore/dubbo-demo)
 
-<slide>
+<slide :class="aligncenter">
 ## gateway - 网关
 ----
 
