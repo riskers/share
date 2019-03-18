@@ -46,11 +46,13 @@ speaker: 张志勇
 
 <slide>
 
-* 压测平台\: mibench
-* RPC\: dubbo
-* 配置系统 + 服务注册\: nacos
-* 路由网关\: gateway
+* 压测平台
+* RPC
+* 配置系统
+* 服务注册
+* 路由网关
 * 日志系统
+* 监控系统
 
 :::note
 这些是我们在过去一年对旧系统的改造
@@ -123,19 +125,24 @@ speaker: 张志勇
 
 <slide :class="aligncenter">
 
-![](https://i.imgur.com/3XmHShC.png)
+![加入mibench](https://i.imgur.com/FiUJUXi.png)
 
 
 <slide :class="aligncenter">
-## dubbo - RPC
+## 有品 dubbo - RPC
 ----
 
 <slide>
 
-* 泛化调用
-* gateway 调用
+* 优化泛化调用
+* 支持内部网关
+* 支持外部网关
+* nacos 注册中心
+* 支持业务错误码
 * 统一结果输出格式
 * 接入 zander
+* traceid
+* 性能优化
 
 <slide :class="aligncenter">
 ### 219{.text-data}
@@ -156,11 +163,11 @@ speaker: 张志勇
 :::
 
 <slide :class="aligncenter">
-![](https://i.imgur.com/GfAgwR8.png)
+![](https://i.imgur.com/avoBFvO.png)
 
 
 <slide :class="aligncenter">
-## nacos - 服务拆分
+## 有品 nacos - 服务治理
 ----
 
 <slide :class="aligncenter">
@@ -170,39 +177,58 @@ speaker: 张志勇
 
 * 服务注册 治理平台
 * 高效访问 解耦
+
+<slide :class="aligncenter">
+
+![](https://i.imgur.com/76pLCIm.png)
+
+
+<slide :class="aligncenter">
+## 业务网关(产品站)
+----
+
 * 逻辑收敛、内容可裁剪、可并发
 
 <slide :class="aligncenter">
-
-![](https://i.imgur.com/GILxsPb.png)
-
-
-<slide :class="aligncenter">
-## gateway - 网关
+## 有品 gateway - 网关
 ----
 
-* 将各系统对外暴露的服务聚合起来，所有要调用这些服务的系统都需要通过 API 网关进行访问
-* 基于这种方式网关可以对 API 进行统一管控
+* 采用 API Gateway 可以与微服务注册中心连接，实现微服务无感知动态扩容
+* API Gateway 对于无法访问的服务，可以做到自动熔断，无需人工参与
+* API Gateway 可以方便的实现蓝绿部署，金丝雀发布或 A/B 发布
+* API Gateway 做为系统统一入口，我们可以将各个微服务公共功能放在 API Gateway 中实现，以尽可能减少各服务的职责
+* 帮助我们实现客户端的负载均衡策略
 
 <slide :class="aligncenter">
 
-![](https://i.imgur.com/4J0nYXP.png)
+![](https://i.imgur.com/nD6aa1a.png)
 
 <slide>
 
-* 熔断
-* 灰度测试
-* 限流
+* 流量控制
+* 服务路由
+* 数据缓存
+* 协议转换
+* 服务注册与发现
+* 负载均衡
+* 日志记录
 
 <slide :class="aligncenter">
 
 ![](https://i.imgur.com/MMklxR2.png)
 
+<slide :class="aligncenter">
+## 监控系统
+----
+
+* 实时监控平台
+
+
 <slide>
 ## 服务化架构
 
 <slide :class="aligncenter">
-![](https://i.imgur.com/HiiJiej.png)
+![架构图](https://i.imgur.com/PApcS4t.png)
 
 :::note
 经过上面的改造，这是现在的架构
