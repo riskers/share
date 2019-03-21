@@ -214,10 +214,6 @@ speaker: 张志勇
 * 日志记录
 
 <slide :class="aligncenter">
-
-![](https://i.imgur.com/MMklxR2.png)
-
-<slide :class="aligncenter">
 ## 监控系统
 ----
 
