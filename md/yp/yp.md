@@ -46,87 +46,17 @@ speaker: 张志勇
 
 <slide>
 
-* 压测平台
 * RPC
 * 配置系统
 * 服务注册
 * 路由网关
 * 日志系统
 * 监控系统
+* 压测平台
 
 :::note
 这些是我们在过去一年对旧系统的改造
 :::
-
-<slide :class="aligncenter">
-## mibench - 压测平台
-
-<slide image="https://i.imgur.com/NAX2vSV.png">
-
-<slide>
-
-* 部署便捷
-* 性能瓶颈
-* 使压测可重放
-* 具备一定的业务压测
-
-<slide>
-
-* 智能 QPS 控制
-* 压测性能好于任何一个被压测接口
-
-<slide :class="aligncenter">
-
-![](https://i.imgur.com/dA36z9X.png)
-
-<slide>
-
-* 服务器无状态
-* 生成报告、存档
-
-<slide>
-
-![](https://i.imgur.com/NGJafQn.png)
-
-<slide>
-
-* 具备调试、权限管理
-
-<slide :class="aligncenter">
-
-![](https://i.imgur.com/MZaEOOJ.png)
-
-<slide>
-
-* 系统可支持水平扩展
-* Agent 服务治理
-
-<slide :class="aligncenter">
-
-![](https://i.imgur.com/FiTYHXJ.png)
-
-<slide :class="aligncenter">
-### 365{.text-data}
-
-服务 365 个接口
-
-:::note
-上线一年 365 个接口
-:::
-
-<slide :class="aligncenter">
-### 3500{.text-data}
-
-产出 3500 份测试报告
-
-:::note
-上线一年 3500 份测试报告
-:::
-
-<slide :class="aligncenter">
-
-![加入mibench](https://i.imgur.com/FiUJUXi.png)
-
 
 <slide :class="aligncenter">
 ## 有品 dubbo - RPC
@@ -221,6 +151,75 @@ speaker: 张志勇
 * 报警定制: 建立了和有品办公IM的通信通道，报警信息能够直接发送到有品企业微信的相关负责人和群聊
 * 上线预警: 预置上线预警功能。当系统上线或上线代码更新时，当错误日志数量超过阈值时会开启报警，对上线行为进行提醒
 * 运行分析: 对系统运行状态进行计算分析，并通过运行图的方式进行展示
+
+<slide :class="aligncenter">
+## mibench - 压测平台
+
+<slide image="https://i.imgur.com/NAX2vSV.png">
+
+<slide>
+
+* 部署便捷
+* 性能瓶颈
+* 使压测可重放
+* 具备一定的业务压测
+
+<slide>
+
+* 智能 QPS 控制
+* 压测性能好于任何一个被压测接口
+
+<slide :class="aligncenter">
+
+![](https://i.imgur.com/dA36z9X.png)
+
+<slide>
+
+* 服务器无状态
+* 生成报告、存档
+
+<slide>
+
+![](https://i.imgur.com/NGJafQn.png)
+
+<slide>
+
+* 具备调试、权限管理
+
+<slide :class="aligncenter">
+
+![](https://i.imgur.com/MZaEOOJ.png)
+
+<slide>
+
+* 系统可支持水平扩展
+* Agent 服务治理
+
+<slide :class="aligncenter">
+
+![](https://i.imgur.com/FiTYHXJ.png)
+
+<slide :class="aligncenter">
+### 365{.text-data}
+
+服务 365 个接口
+
+:::note
+上线一年 365 个接口
+:::
+
+<slide :class="aligncenter">
+### 3500{.text-data}
+
+产出 3500 份测试报告
+
+:::note
+上线一年 3500 份测试报告
+:::
+
+<slide :class="aligncenter">
+
+![加入mibench](https://i.imgur.com/FiUJUXi.png)
 
 
 <slide>
