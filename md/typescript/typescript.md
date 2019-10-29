@@ -1,3 +1,123 @@
+title: 移动端页面适配方案
+speaker: riskers
+theme: tomorrow
+url: https://riskers.github.io/share/flexible
+js:
+
+- https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
+- ./gtag.js
+
+<slide :class="aligncenter">
+
+# TypeScript
+
+## JavaScript that scales
+
+![](./img/logo.png)TypeScript = JavaScript + Type
+
+:::note
+可见 TypeScript 的关键在 Type (类型) 上
+
+------
+
+<slide>
+
+## 强类型和弱类型
+
+* 使之强制数据类型定义的语言，没有强制类型转化前，不允许两种不同类型的变量相互操作
+* 数据类型可以被忽略的语言
+
+<slide>
+
+## 动态语言和静态语言
+
+????
+
+------
+
+<slide>
+
+## TypeScript 类型系统
+
+2012.10 ~ Now
+
+-----
+
+<slide>
+
+## 类型声明
+
+```ts
+{值}: 类型
+```
+
+## 基础类型
+
+```ts
+const n: number = 6; // Number
+const hasDone: boolean = false; // Boolean
+const text: string = "abc"; // String
+
+const list: number[] = [1, 2, 3]; // Array
+const x: [string, number];  // Tuple
+enum Color {Red, Green, Blue};  // Enum
+
+function log(msg: string): void {  // Void
+  console.log(msg)
+}
+
+class Person {} // Class
+```
+
+
+## 高级类型
+
+```ts
+type fooType = string | number;
+```
+
+> 等等等等很多很多
+
+## 泛型
+
+```ts
+class Queue<T> {
+  private data: T[] = [];
+  push = (item: T) => {
+    this.data.push(item)
+  }
+  pop = (): T|undefined => {
+    this.data.shift()
+  }
+}
+
+const q = new Queue<number>();
+q.push(0)
+q.push("a") // Error
+```
+
+
+## 使用 TypeScript 的好处
+
+* 代码提示
+
+![]()
+
+* 不用看文档
+
+* 将低级错误暴露在编译期
+
+
+![]()
+
+> 基本就是静态类型语言对动态类型语言的好处
+
+----
+
+动态类型一时爽,
+代码重构火葬场!
+
+
 https://barretlee.github.io/ppt/TypeScript%20%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F.pdf
 
 为什么要存在 TS?
@@ -80,7 +200,11 @@ https://gist.github.com/riskers/0bb7b9fcea5747c21d1d195566c29fbf
 
 ## When
 
-什么时候适合使用 TS
+什么时候适合使用 TS ?
+
+大型项目、多人协作、长期迭代维护
+
+活动页什么的就没必要了，太折腾
 
 ## 逐步升级
 

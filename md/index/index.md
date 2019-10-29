@@ -15,6 +15,7 @@ js:
 - [css module](https://riskers.github.io/share/css_modules){.bounce}
 - [chrome extension](https://riskers.github.io/share/chrome_extension){.bounce}
 {.description}
+- [TypeScript](https://riskers.github.io/share/typescript){.bounce}
 
 ---
 
