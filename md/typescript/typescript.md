@@ -273,4 +273,12 @@ TS 为什么存在? 静态类型
 
 <slide class="bg-apple">
 
+# 实例
+----
+
+[:fa-code: code](https://stackblitz.com/edit/typescript-fu7mf7) {.button.ghost.radius}
+
+
+<slide class="bg-apple">
+
 # Thanks
