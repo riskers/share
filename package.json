@@ -3,12 +3,10 @@
   "author": "riskers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {
-    "nodeppt": "^2.0.3"
+    "nodeppt": "^2.1.8"
   },
   "devDependencies": {},
-  "scripts": {
-  },
+  "scripts": {},
   "license": "ISC"
 }

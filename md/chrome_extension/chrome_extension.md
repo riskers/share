@@ -3,13 +3,14 @@ speaker: riskers
 prismTheme: dark
 url: https://riskers.github.io/share/chrome_extension
 js:
-  - https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
-  - ./gtag.js
 
+- https://www.googletagmanager.com/gtag/js?id=UA-131910384-4
+- ./gtag.js
 
 <slide :class="aligncenter">
 
 # Chrome Extension
+
 ---
 
 [:fa-home:](https://github.com/riskers/blog)
@@ -17,27 +18,29 @@ js:
 [:fa-weibo:](http://weibo.com/damaoxianjia123)
 
 [slide data-transition="zoomin"]
-* Chrome Extension 能做什么 {:&.fadeIn}
-* Chrome Extension 核心
-  * background
-  * content_scripts
-  * inject_scripts
-* Chrome 开发概述
-  * [manifest.json](https://developer.chrome.com/extensions/manifest)
-  * [Chrome Extension API](https://developer.chrome.com/extensions/api_index)
-* Chrome Extension VS Chrome App
-* Chrome 安全问题
 
-****************************************************************************************************************
+- Chrome Extension 能做什么 {:&.fadeIn}
+- Chrome Extension 核心
+  - background
+  - content_scripts
+  - inject_scripts
+- Chrome 开发概述
+  - [manifest.json](https://developer.chrome.com/extensions/manifest)
+  - [Chrome Extension API](https://developer.chrome.com/extensions/api_index)
+- Chrome Extension VS Chrome App
+- Chrome 安全问题
 
-[slide data-transition="zoomin"]
+---
+
+<slide>
+
 # Chrome Extension 能做什么
 
-* popup {:&.fadeIn}
-* option
-* omnibox
-* contextMenus
-* override
+- popup {:&.fadeIn}
+- option
+- omnibox
+- contextMenus
+- override
 
 <slide>
 # popup - 常用选项
@@ -60,29 +63,30 @@ js:
 <slide>
 # override - 自定义 Chrome 页面
 
-* history: 浏览历史 {:&.fadeIn}
-* newtab: 新 Tab
-* bookmarks: 收藏夹
+- history: 浏览历史 {:&.fadeIn}
+- newtab: 新 Tab
+- bookmarks: 收藏夹
 
 <slide>
 # 其他
 
-* [tabs](https://developer.chrome.com/extensions/tabs) {:&.fadeIn}
-* [cookies](https://developer.chrome.com/extensions/cookies)
-* [storage](https://developer.chrome.com/extensions/storage)
-* [webRequest](https://developer.chrome.com/extensions/webRequest)
+- [tabs](https://developer.chrome.com/extensions/tabs) {:&.fadeIn}
+- [cookies](https://developer.chrome.com/extensions/cookies)
+- [storage](https://developer.chrome.com/extensions/storage)
+- [webRequest](https://developer.chrome.com/extensions/webRequest)
 
-****************************************************************************************************************
+---
 
 [slide data-transition="zoomin"]
+
 # Chrome Extension 核心
 
-* background 主进程 {:&.fadeIn}
-  * 生命周期: 常驻 Chrome 后台
-* content_scripts 注入 CSS / JavaScript
-  * 控制 DOM
-* inject_scripts 注入 CSS / JavaScript?
-  * 获取 `window` 变量
+- background 主进程 {:&.fadeIn}
+  - 生命周期: 常驻 Chrome 后台
+- content_scripts 注入 CSS / JavaScript
+  - 控制 DOM
+- inject_scripts 注入 CSS / JavaScript?
+  - 获取 `window` 变量
 
 <slide>
 
@@ -97,23 +101,25 @@ js:
 <slide>
 # 三者权限
 
-| | Chrome API | DOM | window 变量 |
-| -- | -- | -- | -- |
-| background | All | None | None |
-| content_scripts | not all | All | None |
-| inject_scripts | None | All | All |
+|                 | Chrome API | DOM  | window 变量 |
+| --------------- | ---------- | ---- | ----------- |
+| background      | All        | None | None        |
+| content_scripts | not all    | All  | None        |
+| inject_scripts  | None       | All  | All         |
 
-****************************************************************************************************************
+---
 
 [slide data-transition="zoomin"]
+
 # Chrome Extension VS Chrome App
 
-* 权限不同 (如 FileSystem)
-* 展现形式不同
+- 权限不同 (如 FileSystem)
+- 展现形式不同
 
-****************************************************************************************************************
+---
 
 [slide data-transition="zoomin"]
+
 # Chrome Extension 安全问题
 
 ## 无审核，无监控，十分钟上线
@@ -121,11 +127,11 @@ js:
 <slide>
 # Chrome 禁止使用非 web store 下载的扩展
 
-* Windows Chrome 用户自己在 chrome://extension 安装 crx 的方法在 13 年就已经被[禁止](https://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html)
+- Windows Chrome 用户自己在 chrome://extension 安装 crx 的方法在 13 年就已经被[禁止](https://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html)
 
-* Mac Chrome 用户安装 crx 的方法在 15 年也被[禁止](https://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html)
+- Mac Chrome 用户安装 crx 的方法在 15 年也被[禁止](https://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html)
 
-* [inline-install 被禁止](https://blog.chromium.org/2018/06/improving-extension-transparency-for.html)
+- [inline-install 被禁止](https://blog.chromium.org/2018/06/improving-extension-transparency-for.html)
 
 <slide>
 
@@ -138,16 +144,16 @@ js:
 
 # 查看源码
 
-* Mac ~/Library/Application\ Support/Google/Chrome/Default/Extensions/{Extension-ID}
+- Mac ~/Library/Application\ Support/Google/Chrome/Default/Extensions/{Extension-ID}
 
-****************************************************************************************************************
+---
 
 <slide>
 # THANKS
 
-****************************************************************************************************************
+---
 
 <slide>
 # Q & A
 
-****************************************************************************************************************
+---
