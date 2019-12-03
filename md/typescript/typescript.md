@@ -51,6 +51,12 @@ TS 在第一象限
 
 <slide class="bg-apple fullscreen">
 
+TtpeScript 是强类型语言 也是静态类型语言
+
+[Code](https://stackblitz.com/edit/typescript-q5a6ag)
+
+<slide class="bg-apple fullscreen">
+
 :::card-60{.bg-black-blue}
 
 ![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20191030125252.png)
