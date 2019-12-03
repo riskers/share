@@ -40,6 +40,9 @@ TypeScript 的关键在 Type (类型) 上 {.tobuild.moveIn}
 * 动态类型和静态类型
   1. 动态类型\: 编译的时候就知道每一个变量的类型
   2. 静态类型\: 编译的时候不知道每一个变量的类型，因为类型错误而不能做的事情是运行时错误
+
+TypeScript 是强类型语言 也是静态类型语言
+[:fa-code: code](https://stackblitz.com/edit/typescript-q5a6ag){.button.ghost.radius}
 :::
 
 :::note
@@ -48,12 +51,6 @@ TypeScript 的关键在 Type (类型) 上 {.tobuild.moveIn}
 
 TS 在第一象限
 :::
-
-<slide class="bg-apple fullscreen">
-
-TtpeScript 是强类型语言 也是静态类型语言
-
-[Code](https://stackblitz.com/edit/typescript-q5a6ag)
 
 <slide class="bg-apple fullscreen">
 
