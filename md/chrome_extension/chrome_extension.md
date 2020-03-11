@@ -93,8 +93,8 @@ js:
 ![](./img/background_content_inject_connect.png)
 
 <slide>
-* `background <-> content_scripts`: [chrome.runtime.onMessage](https://developer.chrome.com/apps/runtime#event-onMessage) / [chrome.runtime.sendMessage](https://developer.chrome.com/apps/runtime#method-sendMessage)
-* `content_scripts <-> inject_scripts`: [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage) / [window.onMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowEventHandlers/onmessage)
+* background <-> content_scripts: [chrome.runtime.onMessage](https://developer.chrome.com/apps/runtime#event-onMessage) / [chrome.runtime.sendMessage](https://developer.chrome.com/apps/runtime#method-sendMessage)
+* content_scripts <-> inject_scripts: [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage) / [window.onMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowEventHandlers/onmessage)
 
 <slide>
 # 三者权限
@@ -107,7 +107,7 @@ js:
 
 ---
 
-[slide data-transition="zoomin"]
+<slide>
 
 # Chrome Extension VS Chrome App
 
@@ -116,7 +116,7 @@ js:
 
 ---
 
-[slide data-transition="zoomin"]
+<slide>
 
 # Chrome Extension 安全问题
 
