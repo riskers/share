@@ -75,10 +75,8 @@ js:
 - [storage](https://developer.chrome.com/extensions/storage)
 - [webRequest](https://developer.chrome.com/extensions/webRequest)
 
----
 
-[slide data-transition="zoomin"]
-
+<slide>
 # Chrome Extension 核心
 
 - background 主进程 {:&.fadeIn}
