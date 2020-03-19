@@ -43,24 +43,29 @@ js:
 - override
 
 <slide>
+
 # popup - 常用选项
 
 ![](./img/popup.gif)
 
 <slide>
+
 # options - 配置
 
 ![](./img/options.gif)
 
 <slide>
+
 # omnibox - 搜索栏
 
 ![](./img/omnibox.gif)
 
 <slide>
+
 # contextMenus - 右键菜单
 
 <slide>
+
 # override - 自定义 Chrome 页面
 
 - history: 浏览历史 {:&.fadeIn}
@@ -77,6 +82,7 @@ js:
 
 
 <slide>
+
 # Chrome Extension 核心
 
 - background 主进程 {:&.fadeIn}
@@ -136,6 +142,7 @@ js:
 # [permissions_warning](https://developer.chrome.com/apps/permission_warnings#permissions_with_warnings)
 
 <slide>
+
 ![提示权限](./img/a_lot_of_warnings.png)
 
 <slide>
