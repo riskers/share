@@ -17,7 +17,7 @@ js:
 [:fa-github:](https://github.com/riskers/)
 [:fa-weibo:](http://weibo.com/damaoxianjia123)
 
-[slide data-transition="zoomin"]
+<slide :class="aligncenter">
 
 - Chrome Extension 能做什么 {:&.fadeIn}
 - Chrome Extension 核心
