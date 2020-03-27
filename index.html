@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset=UTF-8><title>首页 - By riskers</title><link rel=stylesheet href=//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=//cdn.staticfile.org/prism/1.15.0/themes/prism.min.css><link rel=stylesheet href=//cdn.staticfile.org/KaTeX/0.10.0-rc.1/katex.min.css><link rel=stylesheet href=//cdn.staticfile.org/prism/1.15.0/themes/prism-tomorrow.min.css><link href=./md/img/css/chunk-vendors.676174ea.css rel=stylesheet></head><body><div><article id=webslides><section slide class="slide bg-black-blue aligncenter" image="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80 .dark"><span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80')"></span><div class=wrap wrap=true><h1 class=text-shadow>Riskers Share</h1><hr><ul class=description><li><a href=https://riskers.github.io/share/flexible class=bounce target=_blank>flexible</a></li><li><a href=https://riskers.github.io/share/css_modules class=bounce target=_blank>css module</a></li><li><a href=https://riskers.github.io/share/chrome_extension class=bounce target=_blank>chrome extension</a></li><li><a href=https://riskers.github.io/share/typescript class=bounce target=_blank>TypeScript</a></li></ul><hr></div><footer class=alignright><div class=wrap><p>使用 <a href=https://github.com/ksky521/nodeppt target=_blank>nodePPT</a> 搭建的 PPT 分享站 By <a href=https://github.com/riskers target=_blank>riskers</a></p></div></footer></section></article></div><script src="https://www.googletagmanager.com/gtag/js?id=UA-131910384-4"></script><script src=./gtag.js></script><script>window.pluginsOptions = {}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let isPrintMode = false;
+    if(~location.search.indexOf('print-pdf')){
+        isPrintMode = true;
+        WebSlides.registerPlugin('scroll', function(){});
+    }
+    const ws = new WebSlides({
+        loop: false
+    })
+    window.wsInstance = ws;
+    if(isPrintMode){
+        ws.slides.forEach(s=>s.show())
+    }
+}, false)</script><script src=./md/img/js/chunk-vendors.js></script><script src=./md/img/js/index.js></script></body></html>
