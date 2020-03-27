@@ -46,19 +46,19 @@ js:
 
 # popup - 常用选项
 
-![](./img/popup.gif)
+![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172425.gif)
 
 <slide>
 
 # options - 配置
 
-![](./img/options.gif)
+![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172409.gif)
 
 <slide>
 
 # omnibox - 搜索栏
 
-![](./img/omnibox.gif)
+![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172340.gif)
 
 <slide>
 
@@ -96,7 +96,7 @@ js:
 
 # 三者通信
 
-![](./img/background_content_inject_connect.png)
+![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172320.png)
 
 <slide>
 * background <-> content_scripts: [chrome.runtime.onMessage](https://developer.chrome.com/apps/runtime#event-onMessage) / [chrome.runtime.sendMessage](https://developer.chrome.com/apps/runtime#method-sendMessage)
@@ -143,7 +143,7 @@ js:
 
 <slide>
 
-![提示权限](./img/a_lot_of_warnings.png)
+![提示权限](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172204.png)
 
 <slide>
 

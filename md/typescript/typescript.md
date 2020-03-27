@@ -18,7 +18,7 @@ js:
 
 ----
 
-![](./img/logo.png)
+![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171149.png)
 
 ----
 
@@ -30,7 +30,7 @@ TypeScript 的关键在 Type (类型) 上 {.tobuild.moveIn}
 
 :::column {.bg-black-blue.vertical-align.sm}
 
-!![](./img/langtype.png .aligncenter)
+!![](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171127.png .aligncenter)
 
 ---
 
@@ -42,6 +42,7 @@ TypeScript 的关键在 Type (类型) 上 {.tobuild.moveIn}
   2. 静态类型\: 编译的时候不知道每一个变量的类型，因为类型错误而不能做的事情是运行时错误
 
 TypeScript 是强类型语言 也是静态类型语言
+
 [:fa-code: code](https://stackblitz.com/edit/typescript-q5a6ag){.button.ghost.radius}
 :::
 

@@ -49,7 +49,7 @@ js:
 * **屏幕像素密度**：`326dpi`
     * 屏幕像素密度（Pibel Per Inch）简称 `ppi` ，单位是 `dpi`（dot per inch）。这里指屏幕水平或垂直每英寸有 326 个物理像素。原则上来说，ppi 越高越好，因为图像会更加细腻清晰。
 
-* ![ppi](./img/ppi.png)
+* ![ppi](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171918.png)
 * https://www.sven.de/dpi/
 
 <slide :class="aligncenter">
@@ -67,7 +67,7 @@ js:
 ---
 * 一个没有为移动端做优化的网页，会尽可能缩小网页让用户看到所有东西 {:&.fadeIn}
 * 浏览器厂商为了让用户在小屏幕下网页也能够显示地很好，所以把视口宽度设置地很大，一般在 768px ~ 1024px 之间，最常见的宽度是 980px
-* ![布局视口](./img/layout_viewport.png)
+* ![布局视口](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171851.png)
 
 <slide>
 ## 布局视口
@@ -89,7 +89,7 @@ js:
 
 * 用户正在看到的网页的区域，大小是屏幕中**CSS 像素**的数量 {:&.fadeIn}
 
-* ![视觉视口](./img/visual_layout.png)
+* ![视觉视口](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172001.png)
 * 获取视觉视口尺寸
 
     `window.innerWidth/Height`
@@ -127,7 +127,7 @@ js:
 默认浏览器是安卓系统内置的浏览器，长下面那个样子。而且它使用的是Webkit而不是Blink。只有在更新安卓系统的时候才能更新它。直到安卓4.3，Google不再更新。
 
 
-![安卓webkit](./img/android_webkit.jpg)
+![安卓webkit](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171549.jpg)
 
 而下载浏览器都返回的是理想视口尺寸。
 :::
@@ -161,7 +161,7 @@ js:
 ## 查看缩放比例
 ---
 
-![查看缩放比例](./img/ratio.png)
+![查看缩放比例](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171932.png)
 
 >这里的 0.3 是相对于**理想视口**的
 
@@ -234,7 +234,7 @@ zoom level = screen.width / window.innerWidth
 <slide>
 以这个为例
 
-![app-demo](./img/app-demo.jpg)
+![app-demo](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171753.jpg)
 
 
 <slide>
@@ -269,9 +269,9 @@ zoom level = screen.width / window.innerWidth
 ## 适配方案二：固定宽度，viewport缩放
 ---
 
-**设计图、页面宽度、viewport width使用一个宽度，浏览器帮我们完成缩放。单位使用px即可**
+**设计图、页面宽度、viewport width 使用一个宽度，浏览器帮我们完成缩放。单位使用 px 即可**
 
-![width-demo](./img/width-demo.gif)
+![width-demo](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172013.gif)
 
 [note]
 生成的viewport告诉浏览器网页的布局视口使用 640px，然后把页面缩放成50%，这是绝对的等比例缩放。图片、文字等等所有元素都被缩放在手机屏幕中。
@@ -288,7 +288,7 @@ zoom level = screen.width / window.innerWidth
 ## 适配方案三：rem做宽度，viewport缩放
 ---
 
-![rem](./img/rem.png)
+![rem](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171945.png)
 
 动态生成：
 
@@ -305,7 +305,7 @@ zoom level = screen.width / window.innerWidth
 ### 设置 rem
 **得到一个与屏幕宽度相关的单位**
 
-![rem](./img/flexible.png)
+![rem](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171834.png)
 
 ```css
 html{
@@ -352,12 +352,12 @@ html{
 
 <slide>
 
-![demo](./img/demo.png)
+![demo](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171811.png)
 
 第一种方案做简单页面还行，做复杂一点的就有点麻烦了。
 
 <slide>
-![PK活动](./img/360demo.png)
+![PK活动](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327171431.png)
 
 [note]
 这是我曾经做过的一个页面，『PK』要和左右两张图平行，而且下面的『不怒自威』、『义薄云天』和下面的战斗力位置都要固定，不能有差。如果用第一种方案，可能各个元素就要绝对定位，然后各种百分比来定位了。且不说计算麻烦，而且辛苦一番最后的结果尺寸是和设计图有出入的。
@@ -380,7 +380,7 @@ html{
 * [移动端高清、多屏适配方案](http://div.io/topic/1092)
 * [从网易与淘宝的 font-size 思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
 * [百度方案](http://js8.in/2015/12/12/%E6%89%8B%E6%9C%BA%E7%99%BE%E5%BA%A6%E7%A7%BB%E5%8A%A8%E9%80%82%E9%85%8D%E5%88%87%E5%9B%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D/)
-* [移动端自适应方案](http://f2e.souche.com/blog/yi-dong-duan-zi-gua-ying-fang-an/) 介绍了 flex 布局和rem方案
+* [移动端自适应方案](http://f2e.souche.com/blog/yi-dong-duan-zi-gua-ying-fang-an/) 介绍了 flex 布局和 rem 方案
 
 <slide>
 # 原文

@@ -153,7 +153,7 @@ class Demo extends React.Component {
 
 <slide>
 
-![react渲染后的DOM](./img/d1.png)
+![react渲染后的DOM](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172111.png)
 
   [note]
   解决了什么问题？
@@ -194,7 +194,7 @@ module: {
 }
 ```
 
-![styles对象](./img/d2.png)
+![styles对象](https://github-riskers-blog.oss-cn-qingdao.aliyuncs.com/20200327172125.png)
 
   [note]
   modules: 开启 CSS Modules
